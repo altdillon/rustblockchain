@@ -10,3 +10,4 @@ extern crate time; // ctime for unix time
 extern crate sha2;
 
 pub mod block;
+pub mod TheBlockChain;
