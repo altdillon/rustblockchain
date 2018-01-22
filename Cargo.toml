@@ -1,0 +1,9 @@
+[package]
+name = "blockchain"
+version = "0.1.0"
+authors = ["dillon <dhall@motocol.com>"]
+
+
+[dependencies]
+sha2 = "0.7.0" # https://crates.io/crates/sha2
+time = "0.1" # https://doc.rust-lang.org/time/time/index.html
