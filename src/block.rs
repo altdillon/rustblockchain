@@ -17,34 +17,36 @@ pub struct Transaction
     amount: i32,
 }
 
-// a block in the block chain
-pub struct BlockElem
-{
-    pub index: u32,
-    timestamp: Timespec, // timestamp is number of seconds since 1970
-    transactions: Vec<Transaction>,
-    proof: u64,
-    last_hash: Sha256,
-}
-
-impl BlockElem
-{
-    // constructor method
-    pub fn new(nextIndex:u32,last_block_hash:&Sha256) -> BlockElem
-    {
-        BlockElem {index: nextIndex,timestamp:get_time(),proof: 1,last_hash:last_block_hash.clone(),transactions:Vec::new()}
-    }
-
-    pub fn add_transaction(&mut self,a_sender:&Sha256,a_recipient:&Sha256,a_amount:i32)
-    {
-        self.transactions.push(Transaction {sender:a_sender.clone() , recipient:a_recipient.clone(),amount:a_amount});
-    }
-
-    pub fn list_block(&self)
-    {
-        for i in &(self.transactions)
-        {
-            
-        }
-    }
-}
+// // a block in the block chain
+// pub struct BlockElem
+// {
+//     pub index: u32,
+//     timestamp: Timespec, // timestamp is number of seconds since 1970
+//     transactions: Vec<Transaction>,
+//     proof: u64,
+//     last_hash: Sha256,
+// }
+//
+// impl BlockElem
+// {
+//     // constructor method
+//     pub fn new(nextIndex:u32,last_block_hash:&Sha256) -> BlockElem
+//     {
+//         BlockElem {index: nextIndex,timestamp:get_time(),proof: 1,last_hash:last_block_hash.clone(),transactions:Vec::new()}
+//     }
+//
+//     pub fn add_transaction(&mut self,a_sender:&Sha256,a_recipient:&Sha256,a_amount:i32) -> u32
+//     {
+//         self.transactions.push(Transaction {sender:a_sender.clone() , recipient:a_recipient.clone(),amount:a_amount});
+//
+//         self.index + 1
+//     }
+//
+//     pub fn list_block(&self)
+//     {
+//         for i in &(self.transactions)
+//         {
+//
+//         }
+//     }
+// }
